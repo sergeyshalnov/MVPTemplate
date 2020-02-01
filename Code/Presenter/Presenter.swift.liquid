@@ -1,0 +1,33 @@
+{% include 'header' %}
+
+import Foundation
+
+final class {{ module_info.name }}Presenter {
+  
+    // MARK: - Private Properties 
+
+    private weak var view: {{ module_info.name }}ViewInput?
+
+    // MARK: - Internal Properties
+
+    weak var output: {{ module_info.name }}ModuleOutput?
+    
+    // MARK: - Initialization 
+
+    init(view: {{ module_info.name }}ViewInput) {
+        self.view = view
+    }
+  
+}
+
+// MARK: - {{ module_info.name }}ViewOutput
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {
+  
+}
+
+// MARK: - {{ module_info.name }}ModuleInput
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput {
+  
+}

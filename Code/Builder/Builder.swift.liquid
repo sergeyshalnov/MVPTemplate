@@ -1,0 +1,46 @@
+{% include 'header' %}
+
+import Foundation
+
+final class {{ module_info.name }}Builder {
+
+    // MARK: - Private Properties 
+
+    // MARK: - Initialization
+
+    init() {
+
+    }
+
+}
+
+// MARK: - Public Methods 
+
+extension {{ module_info.name }}Builder {
+
+    func build(output: {{ module_info.name }}ModuleOutput? = nil) -> ModuleInterface<{{ module_info.name }}ModuleInput> {
+        let view = makeView()
+        let presenter = makePresenter(view: view)
+
+        view.output = presenter
+        presenter.output = output
+
+        return ModuleInterface(input: presenter, view: view)
+    }
+  
+}
+
+// MARK: - Components Factory 
+
+private extension {{ module_info.name }}Builder {
+
+    func makeView() -> {{ module_info.name }}ViewController {
+        return {{ module_info.name }}ViewController()
+    }
+
+    func makePresenter(view: {{ module_info.name }}ViewInput) -> {{ module_info.name }}Presenter {
+        return {{ module_info.name }}Presenter(view: view)
+    }
+
+}
+

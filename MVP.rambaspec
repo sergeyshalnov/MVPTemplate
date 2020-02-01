@@ -1,0 +1,28 @@
+# Template information section
+name: MVP
+summary: MVP template
+author: Sergey Shalnov
+version: 1.0.0
+license: MIT
+
+# The declarations for code files
+code_files:
+# Module I/O
+- {name: ModuleInput.swift, path: Code/ModuleInput.swift.liquid}
+- {name: ModuleOutput.swift, path: Code/ModuleOutput.swift.liquid}
+
+# Builder
+- {name: Builder/Builder.swift, path: Code/Builder/Builder.swift.liquid}
+
+# View
+- {name: ViewController/ViewInput.swift, path: Code/ViewController/ViewInput.swift.liquid}
+- {name: ViewController/ViewOutput.swift, path: Code/ViewController/ViewOutput.swift.liquid}
+- {name: ViewController/View.xib, path: Code/ViewController/View.xib.liquid}
+- {name: ViewController/View.swift, path: Code/ViewController/View.swift.liquid}
+- {name: ViewController/ViewController.swift, path: Code/ViewController/ViewController.swift.liquid}
+
+# Presenter
+- {name: Presenter/Presenter.swift, path: Code/Presenter/Presenter.swift.liquid}
+
+# Template dependencies
+dependencies:
